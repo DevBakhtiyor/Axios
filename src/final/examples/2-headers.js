@@ -14,6 +14,7 @@ const Headers = () => {
           Accept: 'application/json',
         },
       });
+      console.log(data, joke);
       setJoke(data.joke);
     } catch (error) {
       console.log(error.response);
@@ -21,11 +22,11 @@ const Headers = () => {
   };
 
   return (
-    <section className='section text-center'>
-      <button className='btn' onClick={fetchDadJoke}>
+    <section className="section text-center">
+      <button className="btn" onClick={fetchDadJoke}>
         random joke
       </button>
-      <p className='dad-joke'>{joke}</p>
+      <p className="dad-joke">{joke}</p>
     </section>
   );
 };
